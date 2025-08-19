@@ -12,9 +12,10 @@ async function getCharacters() {
   let characters = ''
   data.results.forEach(element => {
     characters += `<li>
-      ${element.name}
-      <img src="${element.image}" alt="${element.name}"/>
-    </li>`
+    <a href="detail.html#${element.id}">${element.name}</a>
+    <br>
+    <img src="${element.image}" alt="${element.name}"/>
+  </li>`
   });
   lista.innerHTML = characters
   content.appendChild(lista)
